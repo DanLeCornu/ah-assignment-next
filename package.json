@@ -6,19 +6,28 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "prisma generate --schema src/db/prisma/schema",
+    "db:migrate": "prisma migrate dev --schema src/db/prisma/schema"
+  },
+  "prisma": {
+    "schema": "src/db/prisma"
   },
   "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "@t3-oss/env-nextjs": "^0.12.0",
+    "next": "15.1.6",
+    "prisma": "^6.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.6"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
